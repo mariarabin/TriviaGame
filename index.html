@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./assets/javascript/app.js"></script>
+    <title>Trivia Game</title>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <section style="background: lightblue;" class="jumbotron">
+                    <h1>Trivia Game 👑</h1>
+                    <h6>Photo by rawpixel.com from Pexels</h6>
+                </section>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p><b>Here's how the game works:</b></p>
+                        <ul>
+                            <li>➡️ The player will have a limited amount of time to finish the quiz.</li>
+                            <li>️➡️ The game ends when the time runs out. The page will reveal the number of questions
+                                that players answer correctly and incorrectly.</li>
+                            <li>➡️ Don't let the player pick more than one answer per question.</li>
+                            <li>➡️ Don't forget to include a countdown timer.</li>
+                        </ul>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4 id="timer">Time Remaining (secs.):</h4>
+                                <h1 id="timing">60</h1>
+                                <hr>
+                                <h2>Q u e s t i o n s :</h2>
+                                <button id="start" style="color:purple"></b>Start</b></button>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="body">
+                            <form name="quiz" onsubmit="return false;">
+                                <div class="question">
+                                    <h3>What is your name?</h3>
+                                    <input type="radio" id="q1" name="q1" value="a"> a. Maria<br>
+                                    <input type="radio" id="q1" name="q1" value="b"> b. Loie<br>
+                                    <input type="radio" id="q1" name="q1" value="c"> c. Rabin<br>
+                                </div>
+                                <div class="question">
+                                    <h3>What is your favorite color?</h3>
+                                    <input type="radio" id="q2" name="q2" value="a"> a. Red<br>
+                                    <input type="radio" id="q2" name="q2" value="b"> b. White<br>
+                                    <input type="radio" id="q2" name="q2" value="c"> c. Yellow<br>
+                                </div>
+                                <input onClick="onSubmit()" type="submit" name="Submit" value="submit" />
+                            </form>
+
+
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h3 id="correctA"><b>🏆 Correct Answers:</b><br><br><span id=cor>0</span></h3>
+                            </div>
+                            <div class="col-md-4">
+                                <h3 id="incorrectA"><b>🥧 Incorrect Answers:</b><br><br><span id=inc>0</span></h3>
+                            </div>
+                            <div class="col-md-4">
+                                <h3 id="numOfQ"><b>No. of Questions:</b><br><br><span id=numQ>10</span></h3>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <hr>
+                                <h2 id="ans" style="text-align:center;">Answers:<span id="answers"></span></h2><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <hr>
+                                <h2 id="start" style="text-align:center;"><span class="blinking"></b>Have Fun🤸‍♀️!!!</b></span></h2><br>
+                            </div>
+                        </div>
+
+
+
+
+
+
+</body>
+
+</html>
