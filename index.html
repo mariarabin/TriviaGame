@@ -22,7 +22,8 @@
             <div class="col-md-12">
                 <section style="background: lightblue;" class="jumbotron">
                     <h1>Trivia Game 👑</h1>
-                    <h6>Photo by rawpixel.com from Pexels</h6>
+                    <h6>Questions taken from <a href="https://www.allthetests.com/quiz26/quiz/1243085450/Multiple-choice-quiz">AllTheTest.com</a></h6>
+
                 </section>
                 <div class="row">
                     <div class="col-md-12">
@@ -47,20 +48,69 @@
                         </div>
                         <br>
                         <div class="body">
-                            <form name="quiz" onsubmit="return false;">
+                            <form name="quiz" onsubmit="return false;" style="text-align:left;">
                                 <div class="question">
-                                    <h3>What is your name?</h3>
-                                    <input type="radio" id="q1" name="q1" value="a"> a. Maria<br>
-                                    <input type="radio" id="q1" name="q1" value="b"> b. Loie<br>
-                                    <input type="radio" id="q1" name="q1" value="c"> c. Rabin<br>
+                                    <p> 1. Who wrote the book, "Alice in Wonderland"?</p>
+                                    <input type="radio" id="q1" name="q1" value="a"> a. Lewis Carroll<br>
+                                    <input type="radio" id="q1" name="q1" value="b"> b. J.K. Rowling<br>
+                                    <input type="radio" id="q1" name="q1" value="c"> c. Louis Carroll<br>
                                 </div>
                                 <div class="question">
-                                    <h3>What is your favorite color?</h3>
-                                    <input type="radio" id="q2" name="q2" value="a"> a. Red<br>
-                                    <input type="radio" id="q2" name="q2" value="b"> b. White<br>
-                                    <input type="radio" id="q2" name="q2" value="c"> c. Yellow<br>
+                                    <p>2. What is the abbreviation for Washington, D.C?</p>
+                                    <input type="radio" id="q2" name="q2" value="a"> a. DC<br>
+                                    <input type="radio" id="q2" name="q2" value="b"> b. WA<br>
+                                    <input type="radio" id="q2" name="q2" value="c"> c. WD<br>
                                 </div>
-                                <input onClick="onSubmit()" type="submit" name="Submit" value="submit" />
+                                <div class="question">
+                                    <p> 3. Are walruses found in the South Pole?</p>
+                                    <input type="radio" id="q3" name="q3" value="a"> a. Yes<br>
+                                    <input type="radio" id="q3" name="q3" value="b"> b. No<br>
+                                    <input type="radio" id="q3" name="q3" value="c"> c. Are walruses found in the South
+                                    Pole?<br>
+                                </div>
+                                <div class="question">
+                                    <p> 4. How many sonnets did William Shakespeare write?</p>
+                                    <input type="radio" id="q4" name="q4" value="a"> a. 167<br>
+                                    <input type="radio" id="q4" name="q4" value="b"> b. 108<br>
+                                    <input type="radio" id="q4" name="q4" value="c"> c. 154<br>
+                                </div>
+                                <div class="question">
+                                    <p> 5. Were jeans always blue?</p>
+                                    <input type="radio" id="q5" name="q5" value="a"> a. They were yellow<br>
+                                    <input type="radio" id="q5" name="q5" value="b"> b. Yes<br>
+                                    <input type="radio" id="q5" name="q5" value="c"> c. No<br>
+                                </div>
+                                <div class="question">
+                                    <p> 6. How old was Tony Hawk when he started skateboarding?</p>
+                                    <input type="radio" id="q6" name="q6" value="a"> a. 9<br>
+                                    <input type="radio" id="q6" name="q6" value="b"> b. 6<br>
+                                    <input type="radio" id="q6" name="q6" value="c"> c. 7<br>
+                                </div>
+                                <div class="question">
+                                    <p> 7. What is the other name for General Motors?</p>
+                                    <input type="radio" id="q7" name="q7" value="a"> a. General M's<br>
+                                    <input type="radio" id="q7" name="q7" value="b"> b. GM<br>
+                                    <input type="radio" id="q7" name="q7" value="c"> c. G Motors<br>
+                                </div>
+                                <div class="question">
+                                    <p> 8. Where were cats once the most honored?</p>
+                                    <input type="radio" id="q8" name="q8" value="a"> a. Egypt<br>
+                                    <input type="radio" id="q8" name="q8" value="b"> b. USA<br>
+                                    <input type="radio" id="q8" name="q8" value="c"> c. Greece<br>
+                                </div>
+                                <div class="question">
+                                    <p> 9. Complete this phrase: "Doctor Livingstone, I _____."</p>
+                                    <input type="radio" id="q9" name="q9" value="a"> a. See<br>
+                                    <input type="radio" id="q9" name="q9" value="b"> b. Presume<br>
+                                    <input type="radio" id="q9" name="q9" value="c"> c. Find<br>
+                                </div>
+                                <div class="question">
+                                    <p> 10. What year did the Lincoln penny debut?</p>
+                                    <input type="radio" id="q10" name="q10" value="a"> a. 1898<br>
+                                    <input type="radio" id="q10" name="q10" value="b"> b. 1909<br>
+                                    <input type="radio" id="q10" name="q10" value="c"> c. 1897<br>
+                                </div><br>
+                                <input onClick="onSubmit()" type="Submit" name="Submit" value="Submit" />
                             </form>
 
 
@@ -69,13 +119,14 @@
                         <br>
                         <div class="row">
                             <div class="col-md-4">
-                                <h3 id="correctA"><b>🏆 Correct Answers:</b><br><br><span id=cor>Not Yet Started</span></h3>
+                                <h4 id="correctA"><b>🏆 No. of Correct Answers:</b><br><br><span id=cor>Not Yet Started</span></h4>
                             </div>
                             <div class="col-md-4">
-                                <h3 id="incorrectA"><b>🥧 Incorrect Answers:</b><br><br><span id=inc>Not Yet Started</span></h3>
+                                <h4 id="incorrectA"><b>🥧 No. of Incorrect Answers:</b><br><br><span id=inc>Not Yet
+                                        Started</span></h4>
                             </div>
                             <div class="col-md-4">
-                                <h3 id="numOfQ"><b>No. of Questions:</b><br><br><span id=numQ>2</span></h3>
+                                <h4 id="numOfQ"><b>No. of Questions:</b><br><br><span id=numQ>10</span></h4>
                             </div>
                         </div>
 
@@ -86,7 +137,19 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <hr>
-                                <h2 id="ans" style="text-align:center;">Answers:<span id="answers"></span></h2><br>
+                                <p id="ans" style="text-align:left; color:white">Correct Answers:<ol id="answers">
+                                        <b>1.</b> b. Lewis Carroll<br>
+                                        <b>2.</b> a. DC<br>
+                                        <b>3.</b> b. No<br>
+                                        <b>4.</b> c. 154<br>
+                                        <b>5.</b> c. No<br>
+                                        <b>6.</b> a. 9<br>
+                                        <b>7.</b> b. GM<br>
+                                        <b>8.</b> a. Egypt<br>
+                                        <b>9.</b> b. Presume<br>
+                                        <b>10.</b> b. 1909<br>
+                                </p>
+                                </h6><br>
                             </div>
                         </div>
                         <div class="row">

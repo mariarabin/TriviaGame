@@ -2,8 +2,10 @@
 $(document).ready(function () {
     //start of the game - start timer
     alert("Let's get R-E-A-D-Y👾!!!");
+    timeOut();
     $('form[name="quiz"]').hide();
     $("#ans").hide();
+    $("#answers").hide();
 
 
 
@@ -11,13 +13,19 @@ $(document).ready(function () {
     $("#start").on('click', function () {
         $('form[name="quiz"]').show();
         $("#ans").hide();
+        $("#answers").hide();
         $("#start").hide();
         $("#cor").text("TBD");
         $("#inc").text("TBD");
-        timeOut();
         timerStarts();
-
     });
+
+    $("#submit").on('click', function () {
+        alert("Submitting");
+        onSubmit();
+        $("input[type=radio]").disabled = true;
+
+    })
 
 
 });
@@ -27,10 +35,10 @@ $(document).ready(function () {
 //======VARIABLES========
 
 var timeout = 0;
-var time = 5;
+var time = 60;
 var score = 0;
 var inc = 0;
-var numQs = 2;
+var numQs = 10;
 var correctAns = [];
 
 
@@ -38,7 +46,7 @@ var correctAns = [];
 //===MAIN PROCESS=========================
 
 function timeOut() {
-    setTimeout(function () { alert("Session Expired"); }, 60000);
+    setTimeout(function () { alert("Session Expired"); }, 120000);
 };
 
 function timerStarts() {
@@ -46,11 +54,11 @@ function timerStarts() {
 };
 
 function count() {
-    //time = 30;
     time--;
-    if (time === 0) {
+    if (time == -1) {
         alert("Time is up");
         clearInterval(intervalId);
+        return;
     };
     $("#timing").text(time);
 };
@@ -60,16 +68,11 @@ function count() {
 
 
 
-$("#submit").on('click', function () {
-    alert("Submitting");
-    onSubmit();
-})
-
 
 function onSubmit() {
     var score = 0;
-    var numQs = 2;
-    var correctAns = ['a', 'b'];
+    var numQs = 10;
+    var correctAns = ['b', 'a', 'b', 'c', 'c', 'a', 'b', 'a', 'b', 'b'];
     var inc = 0;
 
     //var q1 = document.forms['quiz']['q1'].value;
@@ -80,10 +83,13 @@ function onSubmit() {
         if ((!!correctAns[i]) && (qx) == correctAns[i]) {
             score++;
             $("#cor").text(score);
-            $("#inc").text(2 - score);
+            $("#inc").text(numQs - score);
+            $("#ans").show("Answers:");
+            $("#answers").show(answers);
+            clearInterval(intervalId);
         }
         else {
-            $("#inc").text(2 - score);
+            $("#inc").text(numQs - score);
         }
     }
     return false;
