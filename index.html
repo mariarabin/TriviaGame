@@ -20,7 +20,7 @@
     <div class="container" style="background:gray">
         <div class="row">
             <div class="col-md-12">
-                <section style="background: lightblue;" class="jumbotron">
+                <section style="background: lavender;" class="jumbotron">
                     <h1>Trivia Game 👑</h1>
                     <h6>Questions taken from <a href="https://www.allthetests.com/quiz26/quiz/1243085450/Multiple-choice-quiz">AllTheTest.com</a></h6>
 
@@ -39,8 +39,8 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <h4 id="timer">Time Remaining (secs.):</h4>
-                                <h1 id="timing">60</h1>
+                                <h5 id="timer">Time Remaining (secs.):</h5>
+                                <h1 id="timing" style="color: brown" ;>60</h1>
                                 <hr>
                                 <h2>Q u e s t i o n s :</h2>
                                 <button id="start" style="color:purple"></b>Start</b></button>
@@ -135,7 +135,13 @@
 
 
                         <div class="row">
-                            <div class="col-sm-12">
+                            <div class="col-sm-4">
+                                <hr>
+                                <p id="yourAns" style="text-align:left; color:white">Your Answers:<span id="yourAnswers">
+                                    </span></p>
+                                <br>
+                            </div>
+                            <div class="col-sm-4">
                                 <hr>
                                 <p id="ans" style="text-align:left; color:white">Correct Answers:<ol id="answers">
                                         <b>1.</b> b. Lewis Carroll<br>
@@ -149,13 +155,14 @@
                                         <b>9.</b> b. Presume<br>
                                         <b>10.</b> b. 1909<br>
                                 </p>
-                                </h6><br>
+                                <br>
                             </div>
+                            <div class="col-sm-2"></div>
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
                                 <hr>
-                                <h2 id="start" style="text-align:center;"><span class="blinking"></b>Have Fun🤸‍♀️!!!</b></span></h2><br>
+                                <h2 id="blink" style="text-align:center;"><span class="blinking"></b>Have Fun🤸‍♀️!!!</b></span></h2><br>
                             </div>
                         </div>
 

@@ -22,12 +22,18 @@ h3 {
 }
 h4 {
     text-align: center;
-    background-color: brown;
+    background-color: lavender;
 }
 h6 {
     text-align: center;
     font-size: 10px;
 }
+
+h5 {
+    text-align: center;
+    text-color: blueviolet;
+}
+
 
 
 p{
@@ -59,7 +65,7 @@ button{
 
 
 .question {
-    background-color: lightblue;
+    background-color: lavender;
 margin-left: 10px;
 
 }

@@ -4,6 +4,7 @@ $(document).ready(function () {
     alert("Let's get R-E-A-D-Y👾!!!");
     timeOut();
     $('form[name="quiz"]').hide();
+    $("#yourAns").hide();
     $("#ans").hide();
     $("#answers").hide();
 
@@ -15,15 +16,18 @@ $(document).ready(function () {
         $("#ans").hide();
         $("#answers").hide();
         $("#start").hide();
-        $("#cor").text("TBD");
-        $("#inc").text("TBD");
+        $("#cor").text("0");
+        $("#inc").text("0");
         timerStarts();
     });
 
     $("#submit").on('click', function () {
         alert("Submitting");
         onSubmit();
-        $("input[type=radio]").disabled = true;
+        //$("input[type=radio]").disabled = true;
+        $('form[name="quiz"]').attr("disabled", true);
+        //$("quiz :input").attr("disabled", true);
+        typeAns();
 
     })
 
@@ -72,25 +76,38 @@ function count() {
 function onSubmit() {
     var score = 0;
     var numQs = 10;
-    var correctAns = ['b', 'a', 'b', 'c', 'c', 'a', 'b', 'a', 'b', 'b'];
+    var correctAns = ['a', 'a', 'b', 'c', 'c', 'a', 'b', 'a', 'b', 'b'];
     var inc = 0;
+    var userAns = [];
 
     //var q1 = document.forms['quiz']['q1'].value;
 
     for (var i = 0; i < correctAns.length; i++) {
         var qx = document.forms["quiz"]["q" + (i + 1)].value;
+        //$("#yourAnswers").push(qx);
         //alert("i:" + i + " qx:" + qx + " cAns:" + correctAns[i]);
+        //$("#yourAnswers").((i + 1) + ". " + qx);
         if ((!!correctAns[i]) && (qx) == correctAns[i]) {
             score++;
             $("#cor").text(score);
-            $("#inc").text(numQs - score);
+            $("#yourAns").show("Your Answers:");
+
+            //alert(qx);
             $("#ans").show("Answers:");
             $("#answers").show(answers);
             clearInterval(intervalId);
         }
         else {
             $("#inc").text(numQs - score);
+            $("#ans").show("Answers:");
+            $("#answers").show(answers);
+            clearInterval(intervalId);
         }
     }
     return false;
 }
+
+
+function typeAns() {
+    $("#yourAnswers").append(qx);
+};
