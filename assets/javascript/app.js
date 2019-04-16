@@ -1,9 +1,9 @@
 // Page loads as a start of the game
 $(document).ready(function () {
-    //start of the game - start timer
-    alert("Let's get R-E-A-D-Y👾!!!");
-    timeOut();
     $('form[name="quiz"]').hide();
+    //start of the game - start timer
+    //alert("Let's get R-E-A-D-Y👾!!!");
+    timeOut();
     $("#yourAns").hide();
     $("#ans").hide();
     $("#answers").hide();
@@ -51,6 +51,7 @@ var correctAns = [];
 
 function timeOut() {
     setTimeout(function () { alert("Session Expired"); }, 120000);
+
 };
 
 function timerStarts() {
@@ -84,7 +85,8 @@ function onSubmit() {
 
     for (var i = 0; i < correctAns.length; i++) {
         var qx = document.forms["quiz"]["q" + (i + 1)].value;
-        //$("#yourAnswers").push(qx);
+        //alert(qx);
+        $("#yourAnswers").html(qx);
         //alert("i:" + i + " qx:" + qx + " cAns:" + correctAns[i]);
         //$("#yourAnswers").((i + 1) + ". " + qx);
         if ((!!correctAns[i]) && (qx) == correctAns[i]) {
