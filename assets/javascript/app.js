@@ -53,16 +53,16 @@ var correctAns = ['a', 'a', 'b', 'c', 'c', 'a', 'b', 'a', 'b', 'b'];
 //===MAIN PROCESS=========================
 
 function timeOut() {
-    setTimeout(function () { alert("Session Expired"); }, 120000);
+    setTimeout("pageRedirect()", 5000);
     //disableRadioButtons();
     //startPage();
 
 
 };
 
-function startPage() {
-    $("#blankPage").load(blankpage.html);
-};
+function pageRedirect() {
+    window.location.replace("https://mariarabin.github.io/TriviaGame/blankpage.html");
+}
 
 
 function timerStarts() {
