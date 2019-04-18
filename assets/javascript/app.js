@@ -122,7 +122,7 @@ function onSubmit() {
         if ((!!correctAns[i]) && (qx) == correctAns[i]) {
             score++;
             $("#cor").text(score);
-            $("#yourAns").show("Your Answers:");
+            //$("#yourAns").show("Your Answers:");
 
             //alert(qx);
             $("#ans").show("Answers:");
