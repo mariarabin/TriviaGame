@@ -53,7 +53,7 @@ var correctAns = ['a', 'a', 'b', 'c', 'c', 'a', 'b', 'a', 'b', 'b'];
 //===MAIN PROCESS=========================
 
 function timeOut() {
-    setTimeout("pageRedirect()", 5000);
+    setTimeout("pageRedirect()", 120000);
     //disableRadioButtons();
     //startPage();
 
