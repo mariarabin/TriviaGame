@@ -121,21 +121,21 @@ function onSubmit() {
         //$("#yourAnswers").((i + 1) + ". " + qx);
         if ((!!correctAns[i]) && (qx) == correctAns[i]) {
             score++;
-            $("#cor").text(score);
             //$("#yourAns").show("Your Answers:");
 
             //alert(qx);
             $("#ans").show("Answers:");
             $("#answers").show(answers);
             clearInterval(intervalId);
-        }
-        else {
-            $("#inc").text(numQs - score);
+        } else {
+            //$("#inc").text(numQs);
             $("#ans").show("Answers:");
             $("#answers").show(answers);
             clearInterval(intervalId);
         }
     }
+    $("#cor").text(score);
+    $("#inc").text(numQs - score);
     return false;
 }
 
